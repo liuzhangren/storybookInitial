@@ -8,9 +8,11 @@ import demo1 from './demo1'
 import demo2 from './demo2'
 import demo3 from './demo3'
 import Layout from './Layout'
+import demo4 from './btnModal'
 
 Welcome()
 demo1()
 demo2()
 demo3()
 Layout()
+demo4()
