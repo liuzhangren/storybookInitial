@@ -1,4 +1,8 @@
 {
+  "version": "0.0.1",
+  "scripts": {
+    "start": "start-storybook -p 8000 -c .storybook"
+  },
   "devDependencies": {
     "@storybook/addon-info": "^3.2.19",
     "@storybook/addon-options": "^3.2.19",
