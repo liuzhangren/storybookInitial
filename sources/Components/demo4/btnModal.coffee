@@ -1,8 +1,8 @@
 ## 组合 具体调用在stories里实现
-import cfxify from 'cfx.dom'
+import prefixDom from 'cfx.react.dom'
 import Pop from './Modal'
 
-CFX = cfxify {
+CFX = prefixDom {
   Pop
 }
 

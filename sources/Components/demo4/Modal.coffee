@@ -1,12 +1,12 @@
 ## coffee配合React的基本封装方法
 import React, { Component } from 'react'
-import cfxify from 'cfx.dom'
+import prefixDom from 'cfx.dom'
 import {
   Modal
   Button
 } from 'antd'
 
-CFX = cfxify {
+CFX = prefixDom {
   'div'
   Modal
   Button

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import cfxify from 'cfx.dom'
+import prefixDom from 'cfx.react.dom'
 
-CFX = cfxify {
+CFX = prefixDom {
 	'div'
 	'button'
 }

@@ -1,4 +1,4 @@
-import cfxify from 'cfx.dom'
+import prefixDom from 'cfx.dom'
 import React, { Component } from 'react'
 import {
 	Layout
@@ -16,7 +16,7 @@ import {
 MenuItem = Menu.Item
 SubMenu = Menu.SubMenu
 
-CFX = cfxify {
+CFX = prefixDom {
 	Layout
 	Sider
 	Menu
@@ -25,7 +25,7 @@ CFX = cfxify {
 	'span'
 }
 
-class layout extends Component 
+class layout extends Component
 	constructor: (props) ->
 		super props
 		@

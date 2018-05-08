@@ -1,6 +1,6 @@
-import cfxify from 'cfx.dom'  ##引入cfx库
+import prifixDom from 'cfx.react.dom'  ##引入cfx库
 
-CFX = cfxify {  ## 声明哪些dom 或者组件需要使用
+CFX = prifixDom {  ## 声明哪些dom 或者组件需要使用
   'div'
 }
 
