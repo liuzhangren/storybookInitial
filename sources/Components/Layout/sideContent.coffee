@@ -1,4 +1,4 @@
-import prefixDom from 'cfx.dom'
+import cfxify from 'cfx.react.dom'
 import React, { Component } from 'react'
 import {
 	Layout
@@ -16,7 +16,7 @@ import {
 MenuItem = Menu.Item
 SubMenu = Menu.SubMenu
 
-CFX = prefixDom {
+CFX = cfxify {
 	Layout
 	Sider
 	Menu

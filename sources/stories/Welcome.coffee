@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import { Welcome } from '@storybook/react/demo'
 
-import cfxify from 'cfx.dom'
+import cfxify from 'cfx.react.dom'
 
 CFX = cfxify { Welcome }
 

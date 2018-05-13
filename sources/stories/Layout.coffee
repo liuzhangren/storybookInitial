@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import Layout from '../Components/Layout/sideContent'
 
-import cfxify from 'cfx.dom'
+import cfxify from 'cfx.react.dom'
 
 CFX = cfxify {
   Layout 
