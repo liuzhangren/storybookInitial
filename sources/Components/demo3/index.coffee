@@ -1,42 +1,56 @@
 import React, { Component } from 'react'
 import cfxify from 'cfx.react.dom'
+import {
+	compose
+	withState
+	withHandlers
+	lifecycle
+} from 'recompose'
 
 CFX = cfxify {
 	'div'
 	'button'
 }
 
-class demo3 extends Component
+{
+	c_div
+	c_button
+} = CFX
 
-	constructor: (props) ->
-		super props
-		@
-
-		@state = 
-			backgroundColor: 'red'
-		@
-	
-	onClick: =>
-		@setState {
-			backgroundColor: 'blue'
-		}
-	render: ->
-
-		{
-			c_div
-			c_button
-		} = CFX
-		[
-			c_div
-				style:
-					width: '100px'
-					height: '100px'
-					backgroundColor: @state.backgroundColor
-			, 'Hello World!!!'
-			
-			c_button
-				onClick: @onClick
-			, '按钮'
-		]
+demo = ({
+	color
+	onClick
+}) =>
+	[
+		c_div
+			key: '01'
+			style:
+				width: '100px'
+				height: '100px'
+				backgroundColor: color
+		, 'Hello World!!!'
 		
-export default demo3
+		c_button
+			key: '02'
+			onClick: onClick
+		, '按钮'
+	]
+
+cycle = 
+	componentDidMount: ->
+		console.log 'hello !!!'
+	componentWillReceiveProps: (nextProps) ->
+		console.log '我是nextProps --->>>', nextProps
+
+export default lifecycle cycle compose(
+	withState 'color', 'setColor', 'red'
+	withState 'isnot', 'setIsnot', false
+	withHandlers {
+		onClick: ({setColor, isnot, setIsnot}) => () =>
+			setIsnot !isnot
+			if isnot
+				setColor 'green'
+			else
+				setColor 'black'
+	}
+) demo
