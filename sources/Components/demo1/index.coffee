@@ -1,15 +1,16 @@
-import cfxify from 'cfx.react.dom'  ##引入cfx库
-
-CFX = cfxify {  ## 声明哪些dom 或者组件需要使用
+import cfxify from 'cfx.react.dom'  
+## 声明哪些dom 或者组件需要使用
+CFX = cfxify { 
   'div'
 }
 
-export default -> ## 默认暴露出去，箭头后面的都是组件 可以引用该文件
-
+export default -> 
+## 将dom CFX化 即可使用
   {
     c_div
-  } = CFX  ## 将dom CFX化 即可使用
-
+  } = CFX  
+  
+## 相当于 <div style='...'> Hello World!!! </div>
   c_div
     style:
       width: '100px'
@@ -17,4 +18,4 @@ export default -> ## 默认暴露出去，箭头后面的都是组件 可以引�
       backgroundColor: 'red'
   , 'Hello World!!!'
 
-  ## 相当于 <div style='...'> Hello World!!! </div>
+  
